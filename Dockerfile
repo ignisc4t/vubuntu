@@ -103,6 +103,9 @@ RUN rm -rf /etc/apt/sources.list && \
 	echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|tee /etc/apt/sources.list.d/brave-browser-release.list && \
 	apt update && \
 	apt install brave-browser -y && \
+#Chrome
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+	dpkg -i google-chrome-stable_current_amd64.deb && \
 #PeaZip
 	wget https://github.com/peazip/PeaZip/releases/download/7.9.0/peazip_7.9.0.LINUX.x86_64.GTK2.deb && \
 	dpkg -i peazip_7.9.0.LINUX.x86_64.GTK2.deb && \
